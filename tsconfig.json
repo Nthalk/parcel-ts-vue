@@ -1,21 +1,24 @@
 {
   "compilerOptions": {
+    // Let parcel do the tsc-compiling
+    "noEmit": true,
     "target": "es5",
     "lib": [
       "dom",
       "es2015",
       "es2015.promise"
     ],
+    // Allow codesplitting on parcel
     "module": "esnext",
     "moduleResolution": "node",
-    "sourceMap": false,
-    "declaration": false,
+    // Required for vue classes
     "experimentalDecorators": true,
-    "downlevelIteration": true,
+    // Linty
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "importHelpers": true,
+    // Required for vue jsx
     "jsx": "preserve",
     "jsxFactory": "h"
   },
@@ -27,5 +30,6 @@
     "./**/*.ts",
     "./**/*.tsx"
   ],
+  // Don't do the thing
   "compileOnSave": false
 }

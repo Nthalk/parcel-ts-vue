@@ -3,19 +3,29 @@
     "target": "es5",
     "lib": [
       "dom",
-      "es2015"
+      "es2015",
+      "es2015.promise"
     ],
-    "module": "es2015",
+    "module": "esnext",
     "moduleResolution": "node",
+    "sourceMap": false,
+    "declaration": false,
     "experimentalDecorators": true,
+    "downlevelIteration": true,
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "importHelpers": true,
     "jsx": "preserve",
     "jsxFactory": "h"
   },
+  "typesRoot": [
+    "./node_modules/@types",
+    "./types"
+  ],
   "include": [
-    "src/**/*.ts"
+    "./**/*.ts",
+    "./**/*.tsx"
   ],
   "compileOnSave": false
 }

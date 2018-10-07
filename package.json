@@ -10,15 +10,32 @@
     ],
     "plugins": [
       "transform-vue-jsx",
-      "babel-plugin-syntax-jsx"
+      "babel-plugin-syntax-jsx",
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ]
     ]
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "tslib": "^1.9.3",
     "vue": "^2.5.17",
-    "vue-class-component": "^6.2.0"
+    "vue-class-component": "^6.2.0",
+    "vue-property-decorator": "^7.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
     "@babel/preset-typescript": "^7.1.0",
     "babel-helper-vue-jsx-merge-props": "^2.0.0",
     "babel-plugin-syntax-jsx": "^6.18.0",

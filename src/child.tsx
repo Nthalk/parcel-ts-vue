@@ -1,17 +1,18 @@
-import Vue from "vue";
-import Component from 'vue-class-component'
+import Vue, {CreateElement, VNode} from "vue";
+import {Component, Prop} from "vue-property-decorator";
 
-@Component({
-  props: {
-    message: String
-  }
-})
+@Component
 export default class Child extends Vue {
-  render(h: any) {
-    return (
-        <div>
-          Child component: {this.message}
-        </div>
-    );
+  @Prop(String) message?: string;
+  doDebug(){
+    debugger
+  }
+
+  render(h: CreateElement): VNode {
+    return <div>
+      <a onClick={this.doDebug}>
+        Child component: {this.message}
+      </a>
+    </div>;
   }
 }
